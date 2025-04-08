@@ -1,0 +1,125 @@
+/* Styles généraux */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0a0a0a;
+    color: white;
+    margin: 0;
+    padding: 0;
+    background-image: url('IMG/while_marbre.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Hero Section */
+.neon-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px #8d00ff, 0 0 30px #004e92;
+}
+
+.neon-subtitle {
+    font-size: 1.5rem;
+    color: #bbb;
+    text-shadow: 0 0 10px #8d00ff;
+}
+
+/* Bouton stylé */
+.btn-glow {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #00042b, #004e92);
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 0 20px #8d00ff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-glow:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #000000, 0 0 40px #8d00ff;
+}
+
+/* Section About */
+.section-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #004e92;
+}
+
+.section-text {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    background: url('IMG/test.jpeg') center/cover no-repeat;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #8d00ff;
+}
+
+/* Services */
+.services-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 280px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    color: aliceblue;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #8d00ff;
+}
+
+.service-icon img {
+    width: 80px;
+    filter: drop-shadow(0 0 10px #8d00ff);
+}
+
+/* Footer */
+.footer {
+    background: #111;
+    text-align: center;
+    padding: 20px;
+    color: aliceblue;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero {
+    background: linear-gradient(270deg, #000428, #004e92, #8d00ff);
+    background-size: 400% 400%;
+    animation: gradientMove 30s infinite alternate ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
