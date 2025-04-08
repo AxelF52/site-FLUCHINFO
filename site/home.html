@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FluchInfo - Accueil</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+</head>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script>
+        particlesJS("hero", {
+            "particles": {
+                "number": {"value": 80},
+                "size": {"value": 3},
+                "color": {"value": "#8d00ff"},
+                "move": {"speed": 2}
+            },
+            "interactivity": {
+                "events": {"onhover": {"enable": true, "mode": "repulse"}}
+            }
+        });
+    </script>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="neon-title">FluchImbert</h1>
+            <p class="neon-subtitle">Recherche en informatique</p>
+            <a href="#about" class="btn-glow">Découvrir</a>
+        </div>
+    </header>
+
+    <section id="about" class="container text-center my-5">
+        <h2 class="section-title">Quelques mots</h2>
+        <p class="section-text">bla bla bla</p>
+        <div class="about-image"></div>
+    </section>
+    <br>
+    <section id="services" class="container text-center my-5">
+        <div class="services-grid">
+            <div class="service-card" onclick="window.location.href='robotique.html'">
+                <div class="service-icon"><img src="IMG/robot.png" alt="Robotique" style="width: 100px;"></div>
+                <br>
+                <h3>Robotique</h3>
+                <p>Création d'automates et systèmes intelligents.</p> 
+            </div>            
+            <div class="service-card">
+                <div class="service-icon"><img src="IMG/code.png" alt="Développement"></div>
+                <br>
+                <h3>Développement</h3>
+                <p>Applications web, logiciels et IA.</p>
+            </div>
+            <div class="service-card",>
+                <div class="service-icon"><img src="IMG/book.png" alt="Exploration" style="width: 120px;"></div>
+                <br>
+                <h3>Exploration</h3>
+                <p>Analyse et production de contenus.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 FluchInfo - Tous droits réservés</p>
+    </footer>
+
+</body>
+</html>
