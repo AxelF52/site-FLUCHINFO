@@ -3,6 +3,8 @@ body {
     background: #f4f4f4;
     margin: 0;
     padding: 0;
+    background-image: url('IMG/whitebg.png');
+    background-size: 100%; /* Étire l'image pour couvrir toute la surface */
 }
 
 h1, h2 {
@@ -133,4 +135,31 @@ button {
 .bool-btn.selected {
     background-color: #1976D2;
     color: white;
+}
+
+.petit-head {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 50px;
+}
+
+.petit-head h1 {
+    font-size: 1.8rem;
+    text-shadow: 0 0 10px #8d00ff;
+}
+
+.petit-head nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.petit-head nav a:hover {
+    color: #8d00ff;
 }

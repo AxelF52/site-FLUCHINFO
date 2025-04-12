@@ -1,4 +1,9 @@
 /* Petit Head */
+body {
+    background-image: url('IMG/whitebg.png');
+    background-size: 100%; /* Étire l'image pour couvrir toute la surface */
+}
+
 .petit-head {
     background: rgba(0, 0, 0, 0.8);
     padding: 15px 30px;
