@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Adventure 🐍</title>
+    <link rel="stylesheet" href="DuoLoginStyle.css">
+</head>
+<body>
+
+<!-- Écran Map -->
+<div id="map-screen">
+    <h1>Liste des chapitres</h1>
+    <div id="level-map"></div>
+</div>
+
+<!-- Écran Leçon -->
+<div id="lesson-screen" style="display: none;">
+    <h2 id="lesson-title"></h2>
+    <div id="lesson-content"></div>
+    <button onclick="startQuestions()">➡️ Commencer les questions</button>
+</div>
+
+<!-- Écran Quiz -->
+<div id="quiz-screen" style="display: none;">
+    <div class="quiz-header">
+        <h2 id="quiz-title"></h2>
+        <button id="help-btn" onclick="showLesson()">❓</button>
+    </div>
+    <div id="progress-bar-container">
+        <div id="progress-bar"></div>
+    </div>    
+    <div id="question-title"></div>
+    <div id="question-body"></div>
+    <div id="puzzel-zone" style="display: none;">
+        <div id="puzzel-choices" class="drag-container"></div>
+        <div id="puzzel-answer" class="drop-container" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+    </div>    
+    <input id="user-input" placeholder="Votre réponse..." />
+    <button id="verifier-btn" onclick="valider()">Vérifier</button>
+    <p id="feedback"></p>
+</div>
+
+
+<script src="question.js"></script>
+<script src="DuoLoginJS.js"></script>
+</body>
+</html>

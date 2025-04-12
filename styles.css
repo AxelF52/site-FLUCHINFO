@@ -123,3 +123,9 @@ body {
     overflow: hidden;
     position: relative;
 }
+
+.hero-content {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

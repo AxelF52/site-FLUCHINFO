@@ -46,9 +46,6 @@
         <h1>FluchInfo</h1>
         <nav>
             <a href="home.html">Accueil</a>
-            <a href="robotique.html">Robotique</a>
-            <a href="informatique.html">Informatique</a>
-            <a href="exploration.html">Exploration</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
@@ -125,18 +122,43 @@
         </style>
 
     <section id="Ressources" class="content-section">
-        <h2>Ressources</h2>
-        <div class="course">
-            <h3>Introduction à la Robotique</h3>
-            <p>Un document complet expliquant les bases de la robotique.</p>
-            <iframe src="docs/Arduino_cours.pdf"></iframe>
-            <a href="docs/Arduino_cours.pdf" class="btn-download" download>Télécharger</a>
-        </div>
-        <a href="https://arduinofactory.fr/composants-electroniques/">composants electroniques</a>
-    </section>
+        <h2>Ressources pour bien débuter avec Arduino</h2>
+        <br>
+        <br>
+        <div class="d-flex flex-wrap align-items-center gap-4">
+            <!-- Image à gauche -->
+            <div style="flex: 1; min-width: 250px;">
+                <img src="IMG/logo arduino.jpg" alt="logo" style="width: 100%; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+                <img src="IMG/arduino.png" alt="Arduino Starter Kit" style="width: 100%; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+            </div>
 
+            <!-- Cartes de ressources à droite -->
+            <div class="resource-cards" style="flex: 2; min-width: 300px; display: grid; gap: 1rem;">
+
+                <!-- Télécharger le logiciel -->
+                <div class="card p-3 shadow-sm rounded">
+                    <h4>💾 Télécharger Arduino IDE</h4>
+                    <p>Le logiciel pour coder et téléverser tes programmes vers ta carte Arduino.</p>
+                    <a href="https://www.arduino.cc/en/software" target="_blank" class="btn btn-primary btn-sm">Télécharger Arduino IDE</a>
+                </div>
+
+                <!-- Acheter les composants -->
+                <div class="card p-3 shadow-sm rounded">
+                    <h4>🛒 Commander du matériel</h4>
+                    <ul>
+                        <li><a href="https://store.arduino.cc/" target="_blank">Boutique officielle Arduino</a></li>
+                        <li><a href="https://www.gotronic.fr" target="_blank">Gotronic (FR)</a></li>
+                        <li><a href="https://fr.banggood.com/" target="_blank">Banggood (kits pas chers)</a></li>
+                        <li><a href="https://arduinofactory.fr/composants-electroniques/" target="_blank">Arduino Factory – Composants</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <br>
     <section id="projet_1" class="content-section">
-        <h2>Projets de Robotique</h2>
+        <h2>Projet 1 : Electro-Piano</h2>
         <div class="project">
             <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" style="width: 50%;">
                 <div class="carousel-inner">
@@ -144,10 +166,10 @@
                         <img src="IMG/piano.jpg" class="d-block w-100" alt="Projet 1">
                     </div>
                     <div class="carousel-item">
-                        <img src="IMG/projet2.jpg" class="d-block w-100" alt="Projet 2">
+                        <img src="IMG/piano2.jpg" class="d-block w-100" alt="Projet 2">
                     </div>
                     <div class="carousel-item">
-                        <img src="IMG/projet3.jpg" class="d-block w-100" alt="Projet 3">
+                        <img src="IMG/piano3.jpg.png" class="d-block w-100" alt="Projet 3">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -160,7 +182,70 @@
             <div class="project-info">
                 <h3>Electro-Piano</h3>
                 <p>Création d'un piano autoamtique, inclus plusieurs musiques transférable depuis un ordinateur</p>
-                <a href="docs/FICHE PROJET ELECTRO-PIANO.pdf" class="btn-download" target="_blank">Voir le PDF</a>
+                <a href="docs/FICHE PROJET ELECTRO-PIANO.pdf" class="btn-download" target="_blank">Voir le Rapport</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projet_2" class="content-section">
+        <h2>Projet 2 : Catnap</h2>
+        <div class="project">
+            <div id="carouselExample2" class="carousel slide" data-bs-ride="carousel" style="width: 50%;">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="IMG/X.jpg" class="d-block w-100" alt="Projet 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="IMG/Y.jpg" class="d-block w-100" alt="Projet 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="IMG/catnap3.jpg" class="d-block w-100" alt="Projet 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="project-info">
+                <h3>Catnap</h3>
+                <p>Reproduction en animatronique du monstre CatNap de PoppyPlaytime. <br> Il est capable de bouge sa tête et sa queue aléatoirement et produit des sons en continue (voix/musique)
+                </p>
+                <a href="docs/FICHE PROJET ELECTRO-PIANO.pdf" class="btn-download" target="_blank">Voir le Rapport</a>
+                <a href="docs/pgm.ino" class="btn-download">Programme principale</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projet_3" class="content-section">
+        <h2>Projet 3 : HuntMan R.E.P.O.</h2>
+        <div class="project">
+            <div id="carouselExample3" class="carousel slide" data-bs-ride="carousel" style="width: 50%;">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="IMG/huntman.jpg" class="d-block w-100" alt="Projet 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="IMG/huntman.jpg" class="d-block w-100" alt="Projet 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="IMG/huntman.jpg" class="d-block w-100" alt="Projet 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="project-info">
+                <h3>HuntMan</h3>
+                <p>Reproduction en animatronique du chasseur dans le jeu R.E.P.O.<br>Equiper des plusieurs capteurs sonores il est capable de détecter la provenance d'un son et de se tourner en sa direction pour attacker</p>
+                <a href="docs/FICHE PROJET ELECTRO-PIANO.pdf" class="btn-download" target="_blank">Voir le Rapport</a>
+                <a href="docs/pgm.ino" class="btn-download">Programme principale</a>
             </div>
         </div>
     </section>
