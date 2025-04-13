@@ -24,7 +24,7 @@ h1, h2 {
 }
 
 .level-button {
-    background-color: #4CAF50;
+    background: linear-gradient(to right, #FF5733, #33FF57); /* Dégradé de base */
     color: white;
     border: none;
     padding: 15px;
@@ -33,7 +33,44 @@ h1, h2 {
     cursor: pointer;
     width: 120px;
     height: 80px;
+    transition: background 0.3s ease; /* Pour des transitions douces */
 }
+.level-button:nth-child(1) {
+    background: linear-gradient(to right, #00aaff, #0051ff);
+}
+
+.level-button:nth-child(2) {
+    background: linear-gradient(to right, #4a6eff, #1041ff);
+}
+
+.level-button:nth-child(3) {
+    background: linear-gradient(to right, #3e67ff, #4031ff);
+}
+
+.level-button:nth-child(4) {
+    background: linear-gradient(to right, #5b5bff, #7020ff);
+}
+
+.level-button:nth-child(5) {
+    background: linear-gradient(to right, #9a3bff, #9010ff);
+}
+
+.level-button:nth-child(6) {
+    background: linear-gradient(to right, #7a00ff, #a200ff);
+}
+
+.level-button:nth-child(7) {
+    background: linear-gradient(to right, #8b00ff, #a600ff);
+}
+
+.level-button:nth-child(8) {
+    background: linear-gradient(to right, #9400ff, #aa00ff);
+}
+
+.level-button:nth-child(9) {
+    background: linear-gradient(to right, #9b00ff, #ae00ff);
+}
+
 
 #lesson-screen {
     background-color: #d0ebff;

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FluchInfo - Robotique</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="contact.js"></script>
+</head>
+
+<body>
+    <header class="petit-head">
+        <h1>FluchInfo</h1>
+        <nav>
+            <a href="home.html">Accueil</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <br>
+    <h1 style="text-align: center; margin-bottom: 30px; font-weight: bold;">Envoyer un e-mail</h1>
+    <form action="https://formspree.io/f/xwplyyoa" method="POST" id="contact-form">
+    <input type="text" name="name" placeholder="Votre nom" required><br><br>
+    <input type="text" name="subject" placeholder="Objet" required><br><br>
+    <textarea name="message" placeholder="Votre message ici..." rows="5" required></textarea><br><br>
+    
+    <!-- Anti-bot (invisible à l'œil humain) -->
+    <input type="text" name="_gotcha" style="display:none">
+    
+    <button type="submit" style="background-color: blueviolet; font-weight: bold;">Envoyer</button>
+    </form>
+
+    <div id="response-msg"></div>
+
+
+    <footer class="footer">
+        <p>&copy; 2025 FluchInfo - Tous droits réservés</p>
+    </footer>
+</body>
+</html>
+
