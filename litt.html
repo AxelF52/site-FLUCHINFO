@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FluchInfo - Présentation du Livre</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .book-container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        .book-cover {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .btn-download {
+            background-color: #6f42c1;
+            color: white;
+            font-weight: bold;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .btn-download:hover {
+            background-color: #582ea5;
+        }
+        .petit-head {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            height: 70px;
+        }
+
+        .petit-head h1 {
+            font-size: 1.8rem;
+            text-shadow: 0 0 10px #8d00ff;
+        }
+
+        .petit-head nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .petit-head nav a:hover {
+            color: #8d00ff;
+        }
+
+    </style>
+</head>
+<body> 
+    <header class="petit-head">
+        <h1>FluchInfo</h1>
+        <nav>
+            <a href="home.html">Accueil</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="book-container">
+        <h1 class="text-center mb-4">📖 Titre du Livre : <em>Flemme de trouver un titre</em></h1>
+
+        <div class="row">
+            <!-- Couverture -->
+            <div class="col-md-5 text-center">
+                <img src="IMG/couverture-livre.jpg" alt="Couverture du livre" class="book-cover">
+            </div>
+
+            <!-- Description -->
+            <div class="col-md-7">
+                <h4>Description :</h4>
+                <p>
+                    "Le Voyageur du Code" est un roman immersif mêlant aventure, technologie et introspection. 
+                    Suivez l’histoire d’un jeune programmeur propulsé dans un univers parallèle où chaque ligne de code façonne le monde autour de lui.
+                    Une œuvre captivante pour les passionnés de numérique et de récits philosophiques.
+                </p>
+
+                <h5 class="mt-4">Téléchargement :</h5>
+                <a href="DOC/voyageur-code.pdf" class="btn-download" download>Télécharger le livre (PDF)</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

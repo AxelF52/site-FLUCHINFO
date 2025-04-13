@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FluchInfo - Donner un avis</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .star-rating {
+            direction: rtl;
+            display: inline-flex;
+            justify-content: center;
+        }
+        .star-rating input[type="radio"] {
+            display: none;
+        }
+        .star-rating label {
+            font-size: 2rem;
+            color: #ccc;
+            cursor: pointer;
+        }
+        .star-rating input[type="radio"]:checked ~ label,
+        .star-rating label:hover,
+        .star-rating label:hover ~ label {
+            color: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="petit-head">
+        <h1>FluchInfo</h1>
+        <nav>
+            <a href="home.html">Accueil</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container mt-5 mb-5">
+        <h1 class="text-center mb-4">Laissez un avis sur votre téléchargement</h1>
+        <form action="https://formspree.io/f/xwplyyoa" method="POST" id="review-form" class="bg-light p-4 rounded shadow">
+
+            <div class="mb-3">
+                <label for="name" class="form-label">Votre nom *</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Votre nom" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="software" class="form-label">Nom du jeu ou logiciel *</label>
+                <input type="text" name="software" id="software" class="form-control" placeholder="Ex : Pack Office 2019" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="message" class="form-label">Votre avis (facultatif)</label>
+                <textarea name="message" id="message" class="form-control" placeholder="Votre retour ici..." rows="4"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Note</label>
+                <div class="star-rating">
+                    <input type="radio" name="note" id="star5" value="5" required><label for="star5">&#9733;</label>
+                    <input type="radio" name="note" id="star4" value="4"><label for="star4">&#9733;</label>
+                    <input type="radio" name="note" id="star3" value="3"><label for="star3">&#9733;</label>
+                    <input type="radio" name="note" id="star2" value="2"><label for="star2">&#9733;</label>
+                    <input type="radio" name="note" id="star1" value="1"><label for="star1">&#9733;</label>
+                </div>
+            </div>
+
+            <!-- Anti-bot invisible -->
+            <input type="text" name="_gotcha" style="display: none">
+
+            <button type="submit" class="btn btn-primary fw-bold">Envoyer</button>
+        </form>
+    </div>
+
+    <footer class="footer text-center mt-5">
+        <p>&copy; 2025 FluchInfo - Tous droits réservés</p>
+    </footer>
+</body>
+</html>

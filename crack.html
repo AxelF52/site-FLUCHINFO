@@ -49,11 +49,11 @@
   margin: 8px;
 }
 
-.bar-5 { height: 60%; }
-.bar-4 { height: 20%; }
-.bar-3 { height: 5%; }
-.bar-2 { height: 25%; }
-.bar-1 { height: 20%; }
+.bar-5 { height: 55%; }
+.bar-4 { height: 35%; }
+.bar-3 { height: 0%; }
+.bar-2 { height: 0%; }
+.bar-1 { height: 5%; }
 
 .labels {
   display: flex;
@@ -146,7 +146,7 @@
         .vignette p {
             font-size: 0.9rem;
             margin-bottom: 10px;
-            text-align: center;
+            text-align: justify;
         }
 
         .vignette .btn {
@@ -175,8 +175,7 @@
         </nav>
     </header>
     <section class="stats-section">
-        <h2>Statistiques de fiabilité (Simplicité de téléchargement)</h2>
-        
+        <h2 style="margin-bottom: 0px; margin-top: 30px;">Statistiques de fiabilité (Simplicité de téléchargement)</h2>
         <div class="stats-content">
           <!-- Graphique -->
           <div class="chart">
@@ -199,13 +198,14 @@
           <!-- Commentaires + bouton -->
           <div class="feedback">
             <div class="comments">
-              <div class="comment"><strong>Utilisateur 1:</strong> Très simple à télécharger, je suis satisfait.</div>
-              <div class="comment"><strong>Utilisateur 2:</strong> Le téléchargement a été rapide et sans problème.</div>
-              <div class="comment"><strong>Utilisateur 3:</strong> Un peu compliqué au début, mais ça s'est bien passé.</div>
-              <div class="comment"><strong>Utilisateur 4:</strong> Quelques erreurs au début, mais résolu rapidement.</div>
-              <div class="comment"><strong>Utilisateur 5:</strong> Très bon service globalement.</div>
+            <div class="comment" style="text-align: center;"><strong>Derniers avis :</strong></div>
+              <div class="comment"><strong>AlexMob23:</strong>ça va (5 étoiles)</div>
+              <div class="comment"><strong>N***o:</strong>Le site de films marchent toujours pas (1 étoile)</div>
+              <div class="comment"><strong>Sans_nom2:</strong> Un peu compliqué (4 étoiles)</div>
+              <div class="comment"><strong>Stephane:</strong> Parfait ! (5 étoiles)</div>
+              <div class="comment"><strong>Crack jeu</strong> Très bien globalement (5 étoiles).</div>
             </div>
-            <button class="btn">Mettre un avis</button>
+            <a class="btn" href="avis.html">Mettre un avis</a>
           </div>
         </div>
       </section>
@@ -214,12 +214,14 @@
     <div class="container">
         <!-- 20 Vignettes -->
         <div class="vignette">
-            <img src="https://via.placeholder.com/600x200" alt="Image 1">
+            <img src="IMG/streaming.jpg" alt="Image 1">
             <div class="text">
-                <h3>Vignette 1</h3>
-                <p>Description du projet ou du contenu. Un petit texte ici.</p>
-                <button class="btn">Télécharger</button>
-            </div>
+                <h3>Film & Séries en streaming</h3>
+                <p>100% gratuit, aucun virus, uniquement 5 pubs à regarder avant visionage.<br>L'adress du site change trés souvent, contacter-nous en cas d'erreur</p>
+                <button class="btn" onclick="window.location.href='https://senpai-stream.me';">
+                    Accéder au site
+                </button>
+                </div>
         </div>
 
         <div class="vignette">
