@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Commande Cocktails</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #4e9ed6, #20c997);
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+    }
+    h1 {
+      text-align: center;
+      margin: 40px 0;
+      color: #ffdf5d;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    }
+    .card {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: 0.3s;
+      color: white;
+    }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+    .card-img-top {
+      height: 600px;
+      object-fit: cover;
+      filter: brightness(0.9);
+    }
+    .verre-grid img {
+      width: 70px;
+      height: auto;
+      cursor: pointer;
+      border: 2px solid transparent;
+      border-radius: 8px;
+    }
+    .verre-grid input[type="radio"] { display: none; }
+    .verre-grid input[type="radio"]:checked + img { border-color: #ffeaa7; }
+    label, p, span { color: #fff; }
+    .form-range { margin-bottom: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Commande de Cocktails (FlamingFluch) </h1>
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Cocktail : Joe -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="IMG/CKT/coka.jpg" class="card-img-top" alt="Joe">
+          <div class="card-body">
+            <h5 class="card-title">Joe</h5>
+            <form action="https://formspree.io/f/xwplyyoa" method="POST">
+              <input type="hidden" name="subject" value="Commande de Joe">
+              <div class="mb-2">
+                <label for="prenom-joe">Votre prénom</label>
+                <input type="text" class="form-control" id="prenom-joe" name="name" required>
+              </div>
+              <label>Ingrédients :</label><br>
+              <label for="whisky-joe">• Whisky (recommandé 25 %)</label>
+              <input type="range" class="form-range" id="whisky-joe" name="Whisky" min="0" max="40" value="25">
+              <span>25 %</span><br>
+              <p>• Coca</p>
+              <label for="ananas-joe">• Jus d’Ananas (recommandé 10 %)</label>
+              <input type="range" class="form-range" id="ananas-joe" name="Jus d’Ananas" min="0" max="20" value="10">
+              <span>10 %</span><br>
+              <label>Choisir un verre :</label>
+              <div class="verre-grid d-flex gap-2 mt-1">
+                <label><input type="radio" name="Verre" value="0" checked><img src="IMG/CKT/bizzare.webp" alt="Tumbler"></label>
+                <label><input type="radio" name="Verre" value="1"><img src="IMG/CKT/chope.webp" alt="Martini"></label>
+                <label><input type="radio" name="Verre" value="2"><img src="IMG/CKT/bierre.jpg" alt="Highball"></label>
+              </div>
+              <input type="text" name="_gotcha" style="display:none">
+              <button type="submit" class="btn btn-warning w-100 mt-3">Commander 🍹</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cocktail : LOVE -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="IMG/CKT/Amour fruité.jpg" class="card-img-top" alt="LOVE">
+          <div class="card-body">
+            <h5 class="card-title">LOVE</h5>
+            <form action="https://formspree.io/f/xwplyyoa" method="POST">
+              <input type="hidden" name="subject" value="Commande de LOVE">
+              <div class="mb-2">
+                <label for="prenom-love">Votre prénom</label>
+                <input type="text" class="form-control" id="prenom-love" name="name" required>
+              </div>
+              <label>Ingrédients :</label><br>
+              <p>• Sirop de fraise</p>
+              <label for="vodka-love">• Vodka (recommandé 10 %)</label>
+              <input type="range" class="form-range" id="vodka-love" name="Vodka" min="0" max="25" value="10">
+              <span>10 %</span><br>
+              <p>• Crazy Tiger Fruits rouges</p>
+              <label>Choisir un verre :</label>
+              <div class="verre-grid d-flex gap-2 mt-1">
+                <label><input type="radio" name="Verre" value="Tumbler" checked><img src="IMG/CKT/flute.jpg" alt="Tumbler"></label>
+                <label><input type="radio" name="Verre" value="Martini"><img src="IMG/CKT/long.webp" alt="Martini"></label>
+                <label><input type="radio" name="Verre" value="Highball"><img src="IMG/CKT/pied.webp" alt="Highball"></label>
+              </div>
+              <input type="text" name="_gotcha" style="display:none">
+              <button type="submit" class="btn btn-warning w-100 mt-3">Commander 🍹</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cocktail : BECK -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="IMG/CKT/Slime.jpg" class="card-img-top" alt="BECK">
+          <div class="card-body">
+            <h5 class="card-title">BECK</h5>
+            <form action="https://formspree.io/f/xwplyyoa" method="POST">
+              <input type="hidden" name="subject" value="Commande de BECK">
+              <div class="mb-2">
+                <label for="prenom-beck">Votre prénom</label>
+                <input type="text" class="form-control" id="prenom-beck" name="name" required>
+              </div>
+              <label>Ingrédients :</label><br>
+              <label for="get27-beck">• Get 27 (recommandé 15 %)</label>
+              <input type="range" class="form-range" id="get27-beck" name="Get27" min="0" max="30" value="15">
+              <span>15 %</span><br>
+              <p>• Crazy Tiger Pomme</p>
+              <label>Choisir un verre :</label>
+              <div class="verre-grid d-flex gap-2 mt-1">
+                <label><input type="radio" name="Verre" value="Tumbler" checked><img src="IMG/CKT/rond.webp" alt="Tumbler"></label>
+                <label><input type="radio" name="Verre" value="Martini"><img src="IMG/CKT/bizzare.webp" alt="Martini"></label>
+                <label><input type="radio" name="Verre" value="Highball"><img src="IMG/CKT/erlen.jpg" alt="Highball"></label>
+              </div>
+              <input type="text" name="_gotcha" style="display:none">
+              <button type="submit" class="btn btn-warning w-100 mt-3">Commander 🍹</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("input", e => {
+      if (e.target.type === "range") {
+        e.target.nextElementSibling.textContent = e.target.value + "%";
+      }
+    });
+  </script>
+</body>
+</html>
