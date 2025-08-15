@@ -127,3 +127,34 @@ body {
     color: aliceblue;
     margin-top: 50px;
 }
+
+/* Limiter la taille des images */
+.project-image img,
+#Ressources img {
+    max-width: 400px; /* largeur max */
+    height: auto; /* garder le ratio */
+    display: block;
+    margin: 0 auto; /* centrer */
+}
+
+/* Éviter le texte en colonne verticale */
+p, h1, h2, h3, h4, h5, h6 {
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+/* Ajuster la grille de présentation */
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-image {
+    flex: 1 1 300px;
+}
+
+.project-info {
+    flex: 2 1 400px;
+}

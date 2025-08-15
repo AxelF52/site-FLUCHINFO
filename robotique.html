@@ -42,160 +42,211 @@
     display: block;
 }
 </style>
-    <header class="petit-head">
-        <h1>FluchInfo</h1>
-        <nav>
-            <a href="home.html">Accueil</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
 
-    <section class="quick-nav">
-        <button onclick="scrollToSection('Ressources')">Ressources</button>
-        <div class="dropdown">
-            <button onclick="toggleDropdown()">Projets</button>
-            <div class="dropdown-content" id="projectsDropdown">
-                <button onclick="scrollToSection('projet_1')">Projet 1</button>
-                <button onclick="scrollToSection('projet_2')">Projet 2</button>
-                <button onclick="scrollToSection('projet_3')">Projet 3</button>
+<header class="petit-head">
+    <h1>FluchInfo</h1>
+    <nav>
+        <a href="home.html">Accueil</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="quick-nav">
+    <button onclick="scrollToSection('Ressources')">Ressources</button>
+    <div class="dropdown">
+        <button>Projets</button>
+        <div class="dropdown-content" id="projectsDropdown">
+            <button onclick="scrollToSection('projet_1')">Projet 1</button>
+            <button onclick="scrollToSection('projet_2')">Projet 2</button>
+            <button onclick="scrollToSection('projet_3')">Projet 3</button>
+        </div>
+    </div>
+</section>
+
+<style>
+.quick-nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 25%;
+    left: 10px;
+    transform: translateY(-50%);
+    gap: 10px;
+    z-index: 1000;
+}
+.quick-nav button {
+    background: #004e92;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    width: 120px;
+    text-align: left;
+}
+.quick-nav button:hover {
+    background: #8d00ff;
+}
+.dropdown {
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #222;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    z-index: 1;
+    min-width: 120px;
+    border-radius: 5px;
+}
+.dropdown-content button {
+    display: block;
+    width: 90%;
+    border: none;
+    background: none;
+    padding: 8px;
+    text-align: left;
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+}
+.dropdown-content button:hover {
+    background-color: #444;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+
+<section id="Ressources" class="content-section">
+    <h2>Ressources pour bien débuter avec Arduino</h2>
+    <br><br>
+    <div class="d-flex flex-wrap align-items-center gap-4">
+        <!-- Images -->
+        <div style="flex: 1; min-width: 250px;">
+            <img src="IMG/logo arduino.jpg" alt="Logo Arduino" style="width: 100%; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+            <img src="IMG/arduino.png" alt="Arduino Starter Kit" style="width: 100%; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+        </div>
+
+        <!-- Ressources -->
+        <div class="resource-cards" style="flex: 2; min-width: 300px; display: grid; gap: 1rem;">
+            <div class="card p-3 shadow-sm rounded">
+                <h4>💾 Télécharger Arduino IDE</h4>
+                <p>Le logiciel indispensable pour programmer et envoyer vos projets sur votre carte Arduino.</p>
+                <a href="https://www.arduino.cc/en/software" target="_blank" class="btn btn-primary btn-sm">Télécharger Arduino IDE</a>
+            </div>
+            <div class="card p-3 shadow-sm rounded">
+                <h4>🛒 Acheter du matériel</h4>
+                <ul>
+                    <li><a href="https://store.arduino.cc/" target="_blank">Boutique officielle Arduino</a></li>
+                    <li><a href="https://www.gotronic.fr" target="_blank">Gotronic (FR)</a></li>
+                    <li><a href="https://fr.banggood.com/" target="_blank">Banggood (kits abordables)</a></li>
+                    <li><a href="https://arduinofactory.fr/composants-electroniques/" target="_blank">Arduino Factory – Composants</a></li>
+                </ul>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <style>
-        .quick-nav {
-            display: flex;
-            flex-direction: column;
-            position: fixed;
-            top: 25%;
-            left: 10px;
-            transform: translateY(-50%);
-            gap: 10px;
-            z-index: 1000;
-        }
-        .quick-nav button {
-            background: #004e92;
-            color: white;
-            border: none;
-            padding: 8px 12px;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: 0.3s;
-            border-radius: 5px;
-            width: 120px;
-            text-align: left;
-        }
-        .quick-nav button:hover {
-            background: #8d00ff;
-        }
-        .dropdown {
-            position: relative;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: -46;
-            right: 2;
-            background-color: #222;
-            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-            z-index: 1;
-            min-width: 120px;
-            border-radius: 5px;
-        }
-        .dropdown-content button {
-            display: block;
-            width: 90%;
-            border: none;
-            background: none;
-            padding: 8px;
-            text-align: left;
-            cursor: pointer;
-            color: white;
-            font-size: 0.9rem;
-        }
-        .dropdown-content button:hover {
-            background-color: #444;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        </style>
+<br>
 
-    <section id="Ressources" class="content-section">
-        <h2>Ressources pour bien débuter avec Arduino</h2>
-        <br>
-        <br>
-        <div class="d-flex flex-wrap align-items-center gap-4">
-            <!-- Image à gauche -->
-            <div style="flex: 1; min-width: 250px;">
-                <img src="IMG/logo arduino.jpg" alt="logo" style="width: 100%; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
-                <img src="IMG/arduino.png" alt="Arduino Starter Kit" style="width: 100%; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
-            </div>
-
-            <!-- Cartes de ressources à droite -->
-            <div class="resource-cards" style="flex: 2; min-width: 300px; display: grid; gap: 1rem;">
-
-                <!-- Télécharger le logiciel -->
-                <div class="card p-3 shadow-sm rounded">
-                    <h4>💾 Télécharger Arduino IDE</h4>
-                    <p>Le logiciel pour coder et téléverser tes programmes vers ta carte Arduino.</p>
-                    <a href="https://www.arduino.cc/en/software" target="_blank" class="btn btn-primary btn-sm">Télécharger Arduino IDE</a>
+<section id="projet_1" class="content-section">
+    <h2>Projet 1 : Electro-Piano</h2>
+    <div class="project">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" style="width: 50%;">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="IMG/piano.jpg" class="d-block w-100" alt="Electro-Piano 1">
                 </div>
-
-                <!-- Acheter les composants -->
-                <div class="card p-3 shadow-sm rounded">
-                    <h4>🛒 Commander du matériel</h4>
-                    <ul>
-                        <li><a href="https://store.arduino.cc/" target="_blank">Boutique officielle Arduino</a></li>
-                        <li><a href="https://www.gotronic.fr" target="_blank">Gotronic (FR)</a></li>
-                        <li><a href="https://fr.banggood.com/" target="_blank">Banggood (kits pas chers)</a></li>
-                        <li><a href="https://arduinofactory.fr/composants-electroniques/" target="_blank">Arduino Factory – Composants</a></li>
-                    </ul>
+                <div class="carousel-item">
+                    <img src="IMG/piano2.jpg" class="d-block w-100" alt="Electro-Piano 2">
                 </div>
-
+                <div class="carousel-item">
+                    <img src="IMG/piano3.jpg.png" class="d-block w-100" alt="Electro-Piano 3">
+                </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
         </div>
-    </section>
-    <br>
-    <section id="projet_1" class="content-section">
-        <h2>Projet 1 : Electro-Piano</h2>
-        <div class="project">
-            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" style="width: 50%;">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="IMG/piano.jpg" class="d-block w-100" alt="Projet 1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="IMG/piano2.jpg" class="d-block w-100" alt="Projet 2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="IMG/piano3.jpg.png" class="d-block w-100" alt="Projet 3">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
-            </div>
-            <div class="project-info">
-                <h3>Electro-Piano</h3>
-                <p>Création d'un piano autoamtique, inclus plusieurs musiques transférable depuis un ordinateur</p>
-                <a href="docs/FICHE PROJET ELECTRO-PIANO.pdf" class="btn-download" target="_blank">Voir le Rapport</a>
-            </div>
+        <div class="project-info">
+            <h3>Electro-Piano</h3>
+            <p>Piano automatisé capable de jouer plusieurs morceaux, programmables et transférables depuis un ordinateur.</p>
+            <a href="docs/FICHE PROJET ELECTRO-PIANO.pdf" class="btn-download" target="_blank">Voir le rapport</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer class="footer">
-        <p>&copy; 2025 FluchInfo - Tous droits réservés</p>
-    </footer>
+<section id="projet_2" class="content-section">
+    <h2>Projet 2 : Décor animé – Poppy Playtime</h2>
+    <div class="project">
+        <div id="carouselExample2" class="carousel slide" data-bs-ride="carousel" style="width: 50%;">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="insta/1.png" class="d-block w-100" alt="Décor animé Poppy Playtime 1">
+                </div>
+                <div class="carousel-item">
+                    <video class="d-block w-100" controls>
+                        <source src="insta/2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="carousel-item">
+                    <img src="insta/3.jpg" class="d-block w-100" alt="Décor animé Poppy Playtime 2">
+                </div>
+                <div class="carousel-item">
+                    <video class="d-block w-100" controls>
+                        <source src="insta/4.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="carousel-item">
+                    <img src="insta/5.jpg" class="d-block w-100" alt="Décor animé Poppy Playtime 3">
+                </div>
+                <div class="carousel-item">
+                    <video class="d-block w-100" controls>
+                        <source src="insta/6.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="carousel-item">
+                    <img src="insta/7.png" class="d-block w-100" alt="Décor animé Poppy Playtime 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="insta/8.png" class="d-block w-100" alt="Décor animé Poppy Playtime 5">
+                </div>
+                <div class="carousel-item">
+                    <img src="insta/9.png" class="d-block w-100" alt="Décor animé Poppy Playtime 6">
+                </div>
+                <div class="carousel-item">
+                    <img src="insta/10.jpg" class="d-block w-100" alt="Décor animé Poppy Playtime 7">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="project-info">
+            <h3>Décor animé – Poppy Playtime</h3>
+            <p>Conception d’un décor interactif et animé inspiré de la licence <strong>Poppy Playtime</strong>, incluant des éléments motorisés et des effets lumineux pour recréer l’atmosphère du jeu vidéo.</p>
+        </div>
+    </div>
+</section>
 
-    <script>
-        function scrollToSection(id) {
-            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
+<footer class="footer">
+    <p>&copy; 2025 FluchInfo - Tous droits réservés</p>
+</footer>
+
+<script>
+    function scrollToSection(id) {
+        document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
 
 </body>
 </html>

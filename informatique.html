@@ -121,81 +121,139 @@
         }
     </style>
 
-    <section id="Ressources" class="content-section">
+<main class="container mt-4">
+
+    <!-- Ressources -->
+    <section id="Ressources" class="content-section mb-5">
         <h2>Ressources pour bien débuter en programmation</h2>
-        <br>
-        <br>
-        <div class="d-flex flex-wrap align-items-center gap-4">
-            <!-- Image à gauche -->
-            <div style="flex: 1; min-width: 250px;">
-                <img src="IMG/vsc.png" alt="logo" style="width: 100%; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
-                <img src="IMG/PyCharm_Icon.svg.png" alt="Arduino Starter Kit" style="width: 100%; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+
+        <div class="d-flex flex-wrap align-items-start gap-4 mt-4">
+            <!-- Images -->
+            <div style="flex:1; min-width:250px;">
+                <img src="IMG/vsc.png" alt="Logo Visual Studio Code" style="width:100%; border-radius:12px; box-shadow:0 0 10px rgba(0,0,0,0.12); margin-bottom:12px;">
+                <img src="IMG/PyCharm_Icon.svg.png" alt="Logo PyCharm" style="width:100%; border-radius:12px; box-shadow:0 0 10px rgba(0,0,0,0.12);">
             </div>
 
-            <!-- Cartes de ressources à droite -->
-            <div class="resource-cards" style="flex: 2; min-width: 300px; display: grid; gap: 1rem;">
-                <!-- Télécharger VSC -->
+            <!-- Cards -->
+            <div class="resource-cards" style="flex:2; min-width:300px; display:grid; gap:1rem;">
                 <div class="card p-3 shadow-sm rounded">
-                    <h4>💻 Visual Studio Code (VSC)</h4>
-                    <p>Un éditeur de code léger et puissant, parfait pour la programmation avec tout type de langages.</p>
-                    <a href="https://code.visualstudio.com/" target="_blank" class="btn btn-primary btn-sm">Télécharger VSC</a>
+                    <h4>💻 Visual Studio Code (VS Code)</h4>
+                    <p>Éditeur léger et extensible, adapté à la majorité des langages. Extensions recommandées : Python, Pylance, GitLens.</p>
+                    <a href="https://code.visualstudio.com/" target="_blank" class="btn btn-primary btn-sm">Télécharger VS Code</a>
                 </div>
 
-                <!-- Télécharger PyCharm -->
                 <div class="card p-3 shadow-sm rounded">
                     <h4>🐍 PyCharm</h4>
-                    <p>IDE parfait pour développer avec Python, une version communotaire disponible gratuite garantissant une structuration parfaite de vos projets</p>
+                    <p>IDE dédié à Python. La version « Community » est gratuite et idéale pour structurer vos projets Python et gérer les environnements virtuels.</p>
                     <a href="https://www.jetbrains.com/pycharm/" target="_blank" class="btn btn-primary btn-sm">Télécharger PyCharm</a>
                 </div>
-
             </div>
         </div>
     </section>
-    <br>
-    <section id="projet_1" class="content-section" style="padding: 40px 0;">
-        <h2 style="background-color: #222; color: aliceblue; text-align: center; border-radius: 15px; padding: 15px;">
-            Projet 1 : Game-Master
-        </h2>
-    
-        <div class="project" style="display: flex; flex-wrap: wrap; gap: 30px; margin-top: 30px;">
-            
-            <!-- Images du projet -->
-            <div class="project-image" style="flex: 1 1 50%;">
-                <img src="IMG/GM1.jpg" class="d-block w-100" alt="Electro-Piano Image 1" style="border-radius: 10px; margin-bottom: 15px;">
-                <img src="IMG/GM2.jpg" class="d-block w-100" alt="Electro-Piano Image 2" style="border-radius: 10px; margin-bottom: 15px;">
-                <img src="IMG/GM3.jpg" class="d-block w-100" alt="Electro-Piano Image 3" style="border-radius: 10px;">
+
+    <!-- Projet 1 -->
+    <section id="projet_1" class="content-section mb-5" style="padding: 20px 0;">
+        <h2 class="p-3 text-center rounded" style="background:#222; color:#fff;">Projet 1 : Game-Master</h2>
+
+        <div class="project mt-4">
+            <!-- Images -->
+            <div class="project-image">
+                <img src="IMG/GM1.jpg" alt="Game-Master capture 1" class="d-block w-100 mb-3" style="border-radius:10px;">
+                <img src="IMG/GM2.jpg" alt="Game-Master capture 2" class="d-block w-100 mb-3" style="border-radius:10px;">
+                <img src="IMG/GM3.jpg" alt="Game-Master capture 3" class="d-block w-100" style="border-radius:10px;">
             </div>
-    
-            <!-- Informations du projet -->
-            <div class="project-info" style="flex: 1 1 45%; background-color: #111; color: white; padding: 25px; border-radius: 15px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
-                <h3 style="margin-bottom: 15px;">🎮 Game-Master</h3>
-    
-                <p><strong>Description :</strong> Une collection de mini-jeux, classiques et récents, idéale pour passer le temps.  L'application propose un système de sauvegarde vous permettant de créer un profil avec un pseudonyme et un mot de passe. Une touche spéciale permet de quitter instantanément le programme et d’ouvrir une page Google de votre choix, pratique pour éviter de se faire surprendre dans des moments inappropriés. </p>
-                
-                <p><strong>Informations techniques :</strong></p>
-                <ul style="list-style-type: disc; padding-left: 20px;">
-                    <li>Langage : Python 3.12</li>
-                    <li>Moteur de jeu : Pygame</li>
-                    <li>Système de connexion : Base de données <code>data.db</code> (SQL)</li>
-                    <li>Personnalisation : fichiers <code>nom.txt</code> modifiables</li>
+
+            <!-- Info -->
+            <div class="project-info" style="background:#0b0b0b; color:#fff; padding:22px; border-radius:12px;">
+                <h3>🎮 Game-Master</h3>
+                <p><strong>Description :</strong> Collection de mini-jeux (classiques et modernes) optimisée pour la détente. L'application permet la création d'un profil utilisateur (pseudonyme + mot de passe) avec sauvegarde locale.</p>
+
+                <p><strong>Fonctionnalités notables :</strong></p>
+                <ul style="padding-left:18px;">
+                    <li>Système de profils et sauvegarde (base SQLite : <code>data.db</code>).</li>
+                    <li>Personnalisation des noms via fichiers texte (<code>nom.txt</code>).</li>
+                    <li>Touche de sortie rapide configurée pour ouvrir une URL (option désactivable).</li>
                 </ul>
-    
-                <a href="#" onclick='alert("Projet pas disponible, réclamez-le dans la section contact.")' class="btn-download" style="display: inline-block; margin-top: 20px; background-color: #5c00b3; color: white; padding: 10px 20px; border-radius: 10px; text-decoration: none; transition: background-color 0.3s ease;">
-                    Télécharger le projet
+
+                <p><strong>Technologies :</strong> Python 3.12 • Pygame</p>
+
+                <a href="#" class="btn" onclick="alert('Projet non disponible : contactez-nous pour obtenir l’accès.')" style="background:#5c00b3; color:#fff; border-radius:8px; padding:10px 18px; text-decoration:none;">Demander l’accès</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projet 3 : FNAF Minecraft -->
+    <section id="projet_2" class="content-section mb-5">
+        <h2 class="p-3 text-center rounded" style="background:#222; color:#fff;">Projet 2 : FNAF Minecraft</h2>
+
+        <div class="project mt-4">
+            <div class="project-image">
+                <img src="IMG/fnaf2.png" alt="FNAF Minecraft screenshot" class="d-block w-100 mb-3" style="border-radius:10px;">
+                <img src="IMG/fnaf1.png" alt="FNAF Minecraft screenshot 2" class="d-block w-100" style="border-radius:10px;">
+            </div>
+
+            <div class="project-info" style="padding:22px; border-radius:12px; background:#f8f9fa;">
+                <h3>🕹️ FNAF Minecraft — point & click</h3>
+
+                <p><strong>Concept :</strong> Jeu point-and-click codé en Python, inspiré par l'univers de <em>Five Nights at Freddy's</em>, transposé dans un univers visuel proche de Minecraft. Le joueur doit surveiller des animatroniques (modélisés façon blocs), gérer l'énergie, et activer des pièges/portes pour survivre aux nuits.</p>
+
+                <p><strong>Caractéristiques :</strong></p>
+                <ul style="padding-left:18px;">
+                    <li>Interface point-and-click (souris) adaptée au style Minecraft.</li>
+                    <li>Systèmes de surveillance, caméras, et événements aléatoires.</li>
+                    <li>Animations simplifiées des animatroniques (sprites et états).</li>
+                    <li>Codé en Python – compatible avec Python 3.10+ (Fichier jeu en .exe).</li>
+                </ul>
+
+                <p><strong>Remarque légale :</strong> Projet « fan-made » inspiré par la licence Five Nights at Freddy's. Il n'est ni officiel ni commercial.</p>
+
+                <!-- Bouton pour télécharger le zip du projet -->
+                <a href="docs/FNAF MC EDITION 1.0.3.zip" class="btn btn-success" download style="border-radius:8px; padding:10px 16px;">
+                    Télécharger le projet (ZIP)
                 </a>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <p>&copy; 2025 FluchInfo - Tous droits réservés</p>
-    </footer>
+</main>
 
-    <script>
-        function scrollToSection(id) {
-            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
+<footer class="footer">
+    <p>&copy; 2025 FluchInfo — Tous droits réservés</p>
+</footer>
+
+<!-- Scripts -->
+<script>
+/* Scroll to section smoothly */
+function scrollToSection(id) {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+}
+
+/* Toggle dropdown (for quick-nav) */
+function toggleDropdown() {
+    const dd = document.getElementById('projectsDropdown');
+    if (!dd) return;
+    const isHidden = dd.getAttribute('aria-hidden') === 'true' || dd.style.display === '' || dd.style.display === 'none';
+    if (isHidden) {
+        dd.style.display = 'block';
+        dd.setAttribute('aria-hidden', 'false');
+    } else {
+        dd.style.display = 'none';
+        dd.setAttribute('aria-hidden', 'true');
+    }
+}
+
+/* Close dropdown when clicking outside */
+document.addEventListener('click', function(e) {
+    const dd = document.getElementById('projectsDropdown');
+    const btn = e.target.closest('button');
+    if (!dd) return;
+    if (!e.target.closest('.dropdown')) {
+        dd.style.display = 'none';
+        dd.setAttribute('aria-hidden', 'true');
+    }
+});
+</script>
 
 </body>
 </html>
