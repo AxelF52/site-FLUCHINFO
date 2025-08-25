@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boutique - FluchInfo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Header cohérent */
+  .petit-head {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .petit-head h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    text-shadow: 0 0 10px #8d00ff;
+  }
+  .petit-head nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  .petit-head nav a:hover {
+    color: #8d00ff;
+  }
+
+  /* Section produits */
+  .product-section {
+    padding: 40px 10%;
+  }
+  .product-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin-bottom: 40px;
+    overflow: hidden;
+    height: 420px; /* Hauteur fixe */
+    display: flex;
+    flex-direction: column;
+  }
+  .product-content {
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+  }
+
+  /* Media */
+  .product-media {
+    flex: 1;
+    min-width: 300px;
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+  }
+  .product-media img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #000;
+  }
+
+  /* Infos produit */
+  .product-info {
+    flex: 1;
+    min-width: 280px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .product-info h2 {
+    margin-top: 0;
+  }
+  .price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #8d00ff;
+  }
+  .stock {
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  .in-stock { color: green; }
+  .sold-out { color: red; }
+
+  .btn-buy {
+    background: #004e92;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: 0.3s;
+  }
+  .btn-buy:hover {
+    background: #8d00ff;
+  }
+  .btn-disabled {
+    background: #aaa !important;
+    cursor: not-allowed;
+  }
+
+  footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    background: #222;
+    color: white;
+  }
+</style>
+
+</head>
+<body>
+
+<header class="petit-head">
+  <h1>FluchInfo</h1>
+  <nav>
+    <a href="home.html">Accueil</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="product-section">
+
+  <!-- Produit 1 -->
+  <div class="product-card">
+    <div class="product-content">
+      <div class="product-media">
+        <img src="IMG/piano.jpg" alt="Electro-Piano">
+      </div>
+      <div class="product-info">
+        <h2>Projet 1 : Electro-Piano</h2>
+        <p>Piano automatisé capable de jouer plusieurs morceaux, programmables et transférables depuis un ordinateur.</p>
+        <p class="price">150 €</p>
+        <p class="stock sold-out">❌ Vendu</p>
+        <p><strong>Restock prévu :</strong> Non</p>
+        <a href="#" class="btn-buy btn-disabled">Indisponible</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Produit 2 -->
+  <div class="product-card" style="height:700px">
+    <div class="product-content">
+      <div class="product-media">
+        <img src="insta/1.png" alt="Décor animé – Poppy Playtime">
+      </div>
+      <div class="product-info">
+        <h2>Projet 2 : Décor animé – Poppy Playtime</h2>
+        <p>Conception d’un décor interactif et animé inspiré de la licence <strong>Poppy Playtime</strong>, incluant des éléments motorisés et des effets lumineux.</p>
+        <p class="price">350 €</p>
+        <p class="stock in-stock">En stock : 1 unité(s)</p>
+        <p><strong>Restock prévu :</strong> Non</p>
+        <a href="checkout.html" class="btn-buy">Acheter</a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 FluchInfo - Tous droits réservés</p>
+</footer>
+
+</body>
+</html>
